@@ -4,9 +4,13 @@ Pre-requisite: go through the seeding and migrating lecture. See todo.md for mor
 
 ## To install locally
 
-- create a MySQL database using CLI or Workbench
-- `npm install`
-- edit `knexfile.js`, replacing host, database, user, and password properties as needed
+1. create a MySQL database for this project
+
+   - Using CLI: `mysql -u host -p`, enter password, then `CREATE DATABASE dbname;`, then `exit`
+   - You can also use SQL Workbench or other visualizer tool
+
+2. `npm install`
+3. edit `knexfile.js`, replacing host, database, user, and password properties as needed
 
 ## To run locally
 
