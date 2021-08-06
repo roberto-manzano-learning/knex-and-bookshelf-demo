@@ -22,7 +22,7 @@ exports.up = function (knex) {
       table.timestamp("created_at").defaultTo(knex.fn.now());
       table.timestamp("updated_at").defaultTo(knex.fn.now());
     })
-    .createTable("warehouses_inventories", function (table) {
+    .createTable("inventories_warehouses", function (table) {
       table
         .uuid("warehouse_id")
         .references("warehouses.id")
@@ -41,7 +41,7 @@ exports.down = function (knex) {
   // run this when we need to undo those changes!
   // note: the order is important here!
   return knex.schema
-    .dropTable("warehouses_inventories")
+    .dropTable("inventories_warehouses")
     .dropTable("inventories")
     .dropTable("warehouses");
 };

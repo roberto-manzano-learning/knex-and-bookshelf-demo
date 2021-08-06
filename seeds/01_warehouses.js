@@ -5,7 +5,7 @@ const lookupTableData = require("../seed_data/inventories_warehouses");
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex("warehouses_inventories")
+  return knex("inventories_warehouses")
     .del()
     .then(function () {
       return knex("inventories").del();
@@ -20,6 +20,6 @@ exports.seed = function (knex) {
       return knex("inventories").insert(inventoryData);
     })
     .then(function () {
-      return knex("warehouses_inventories").insert(lookupTableData);
+      return knex("inventories_warehouses").insert(lookupTableData);
     });
 };
